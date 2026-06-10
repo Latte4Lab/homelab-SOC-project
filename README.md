@@ -38,12 +38,12 @@ All machines run on an isolated VMware VMnet1 Host-Only network. No attack traff
 
 | Folder | Contents |
 |---|---|
-| phase1-recon/ | Nmap attack notes and screenshots |
-| phase2-exploitation/ | Metasploit attack notes and screenshots |
-| phase3-persistence/ | Persistence attack notes and screenshots |
-| dashboard/ | Splunk dashboard documentation and screenshots |
-| detection-queries/ | All SPL queries used across the project |
-| IR-report/ | Final professional incident response report |
+| [phase1-recon/](./phase1-recon/) | Nmap attack notes and screenshots |
+| [phase2-exploitation/](./phase2-exploitation/) | Metasploit attack notes and screenshots |
+| [phase3-persistence/](./phase3-persistence/) | Persistence attack notes and screenshots |
+| [dashboard/](./dashboard/) | Splunk dashboard documentation and screenshots |
+| [detection-queries/](./detection-queries/) | All SPL queries used across the project |
+| [IR-report/](./IR-report/) | Final professional incident response report |
 
 ---
 

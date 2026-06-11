@@ -15,6 +15,10 @@ This Splunk Dashboard Studio dashboard provides real-time visibility across two 
 
 ---
 
+![Dashboard Overview](screenshots/Panne-1-to-3.png)
+![Dashboard Overview](screenshots/Panne-4-to-5.png)
+
+---
 ## Dashboard Panels
 
 ### 1. Total Events Over Time

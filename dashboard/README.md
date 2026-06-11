@@ -15,14 +15,14 @@ This Splunk Dashboard Studio dashboard provides real-time visibility across two 
 
 ---
 
-![Dashboard Overview](screenshots/Panne-1-to-3.png)
-![Dashboard Overview](screenshots/Panne-4-to-5.png)
+![Dashboard Overview](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/dashboard/screenshots/Pannel%201%20to%20%203.png)
+![Dashboard Overview](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/dashboard/screenshots/Pannel%204%20to%205.png)
 
 ---
 ## Dashboard Panels
 
 ### 1. Total Events Over Time
-Tracks overall log volume across all hosts over time. Spikes indicate bursts of activity — useful for correlating with known attack simulation timestamps.
+Tracks overall log volume across all hosts over time. Spikes indicate bursts of activity, useful for correlating with known attack simulation timestamps.
 ```spl
 index=main | timechart span=1h count by host
 ```
@@ -40,7 +40,7 @@ index=main | stats count by sourcetype | sort -count
 ```
 
 ### 4. Failed Authentication Attempts
-Tracks failed login attempts over time across both hosts. Brute force, SSH banner grabbing, and credential attacks all produce spikes here.
+Tracks failed login attempts over time from both hosts. Brute force, SSH banner grabbing, and credential attacks all will create spikes here.
 ```spl
 index=main (host="ubuntu*" OR host="DESKTOP*") (source="/var/log/auth.log" OR sourcetype="WinEventLog:Security") | timechart span=15m count
 ```
@@ -67,17 +67,3 @@ index=main
 | Ubuntu 24.04 (Victim 2) | 192.168.80.130 |
 | Host PC (Splunk) | 192.168.80.1 |
 
----
-
-## Known Issues / Notes
-
-- **Windows hostname filter:** VM hostname is `DESKTOP-6P0RIHQ`. Use `host="DESKTOP*"` not `host="WIN*"`
-- **Sysmon permissions:** After any forwarder reinstall, run this in CMD as admin:
-```cmd
-wevtutil sl Microsoft-Windows-Sysmon/Operational /ca:O:BAG:SYD:(A;;0xf0007;;;SY)(A;;0x7;;;BA)(A;;0x1;;;BO)(A;;0x1;;;SO)(A;;0x1;;;S-1-5-32-573)(A;;0x1;;;S-1-5-18)
-```
-- **Forwarder service account:** Must run as `LocalSystem`, not `NT SERVICE\SplunkForwarder`
-```cmd
-sc.exe config SplunkForwarder obj= "LocalSystem"
-```
-- **Timestamp offset:** Windows logs may show UTC+8 offset — clock sync pending

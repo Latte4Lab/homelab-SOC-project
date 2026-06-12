@@ -90,13 +90,13 @@ index=main host="DESKTOP*" "192.168.80.129"
 
 ## Screenshots
 
-![SYN scan output](screenshots/windows/syn-scan.png)
+![SYN scan output](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/phase1-recon/screenshots/Windows%2011/Kali%20SYN%201.png)
 *Figure 1: SYN scan (-sS) — ports 135, 139, 445 discovered*
 
-![Vuln scan output](screenshots/windows/vuln-scan.png)
+![Vuln scan output](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/phase1-recon/screenshots/Windows%2011/Kali%20vuln%20scan%201.png)
 *Figure 2: Vuln script scan — SMB negotiation rejected, host not vulnerable*
 
-![Splunk no detection](screenshots/windows/splunk-no-detection.png)
+![Splunk no detection](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/phase1-recon/screenshots/Windows%2011/No%20detection%20from%20Kali%20.png)
 *Figure 3: Splunk — no events tied to attacker IP, confirming blind spot*
 
 ---

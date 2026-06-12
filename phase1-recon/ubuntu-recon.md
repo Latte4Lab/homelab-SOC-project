@@ -65,13 +65,16 @@ index=main host="ubuntu*" source="/var/log/auth.log" | timechart span=15m count
 
 ## Screenshots
 
-![SYN scan output](screenshots/ubuntu/syn-scan.png)
+![SYN scan output](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/phase1-recon/screenshots/Ubuntu/Kali%20SYN%201.png)
 *Figure 1: SYN scan (-sS) — ports 22 and 80 discovered*
 
-![Version detection](screenshots/ubuntu/version-scan.png)
+![Version detection](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/phase1-recon/screenshots/Ubuntu/Kali%20Version%20Detection%201.png)
 *Figure 2: Version detection (-sV) — OpenSSH and Apache versions identified*
 
-![Splunk detection](screenshots/ubuntu/splunk-detection.png)
+![Splunk dashboard detection](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/phase1-recon/screenshots/Ubuntu/Vuln%20scan%201%20(Dashboard).png)
+*Figure 3: Splunk — attacker IP 192.168.80.129 detected in Dashboard*
+
+![Splunk detection](https://github.com/Latte4Lab/homelab-SOC-project/blob/main/phase1-recon/screenshots/Ubuntu/Vuln%20scan%202.png)
 *Figure 3: Splunk — attacker IP 192.168.80.129 detected in auth.log*
 
 ---

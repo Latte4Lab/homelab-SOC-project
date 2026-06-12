@@ -98,5 +98,6 @@ Built a real-time monitoring dashboard in Splunk Dashboard Studio with 5 panels:
 
 ## 👤 Author
 
-Putu Elang — Aspiring SOC Analyst / Blue Team
+Putu Elang — Aspiring SOC Analyst / Blue Team  
+🎓 CompTIA Security+ (SY0-701) Certified  
 Building in public | 2026 job target
